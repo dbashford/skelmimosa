@@ -1,0 +1,29 @@
+{
+  "name": "mimosa-skeleton",
+  "version": "0.0.1",
+  "homepage": "https://github.com/dbashford/mimosa-skeleton",
+  "author": "David Bashford",
+  "description": "A skeleton module for Mimosa",
+  "contributors": [
+    {
+      "name": "David Bashford",
+      "email": "dbashford@hotmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dbashford/mimosa-skeleton"
+  },
+  "keywords": [
+    "mimosa",
+    "mmodule",
+    "skeleton"
+  ],
+  "dependencies": {
+    "logmimosa": "0.3.1"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.8"
+  }
+}
