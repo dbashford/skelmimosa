@@ -8,7 +8,7 @@
       "keywords":["mimosa", "skeleton", "workflow", "another", "keyword"]
     },
     {
-      "name:"foo",
+      "name":"foo",
       "url":"git://github.com/dbashford/mimosa-skeleton.git",
       "description":"This is a test, is the skeleton module.  So meta!",
       "author":"dkbbbb",
