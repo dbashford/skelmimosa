@@ -1,11 +1,21 @@
 logger = require 'logmimosa'
 
-retrieveRegistry = require('../util').retrieveRegistry
+util = require('../util')
+retrieveRegistry = util.retrieveRegistry
+outputSkeletons = util.outputSkeletons
 
 _list = ->
   retrieveRegistry (registry) ->
-    registry.skels.forEach (skel) ->
-      console.log skel
+    logger.green('\n  The following skeletons are available for install. To use a skeleton find the name of the')
+    logger.green('  skeleton you want and enter:')
+    logger.blue('\n    mimosa skel:new [skeleton name] [name of directory to install skeleton] \n')
+
+    logger.green('  To find skeletons that use specific technologies, use the mod:search command.')
+    logger.blue('\n    mimosa skel:search backbone\n')
+
+    logger.green('  Skeletons')
+
+    outputSkeletons registry.skels
 
 register = (program) ->
   program
