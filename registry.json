@@ -3,16 +3,9 @@
     {
       "name":"test",
       "url":"git://github.com/dbashford/mimosa.git",
-      "description":"This is a test, is Mimosa not a skeleton",
-      "author":"dkb",
-      "keywords":["mimosa", "skeleton", "workflow", "another", "keyword"]
-    },
-    {
-      "name":"foo",
-      "url":"git://github.com/dbashford/mimosa-skeleton.git",
-      "description":"This is a test, is the skeleton module.  So meta!",
-      "author":"dkbbbb",
-      "keywords":["mimosa", "skeleton", "something", "or", "other"]
+      "description":"This is a test; this is Mimosa not a skeleton",
+      "author":"dbashford",
+      "keywords":["mimosa", "skeleton", "workflow"]
     }
   ]
 }
