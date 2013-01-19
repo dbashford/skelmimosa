@@ -78,7 +78,8 @@ register = (program) ->
       logger.green('  registry, 2) the github URL of the skeleton or 3) the path to the skeleton if the')
       logger.green('  skeleton is on the file system for when skeleton development is taking place. The second')
       logger.green('  argument is the name of the directory to place the skeleton in. If the directory does')
-      logger.green('  not exist, Mimosa will create it.')
+      logger.green('  not exist, Mimosa will create it. If the directory is not provided, the skeleton will be')
+      logger.green('  placed in the current directory.')
       logger.blue( '\n    $ mimosa skel:new <skeletonName> <directory>\n')
 
 module.exports = (program) -> register(program)
