@@ -1,6 +1,6 @@
 {
   "name": "mimosa-skeleton",
-  "version": "0.0.1",
+  "version": "0.0.1alpha",
   "homepage": "https://github.com/dbashford/mimosa-skeleton",
   "author": "David Bashford",
   "description": "A skeleton module for Mimosa",
