@@ -8,6 +8,6 @@ exports.retrieveRegistry = (callback) ->
         registry = JSON.parse body
         callback registry
       catch err
-        logger.error "Regsitry JSON failed to parse: #{err}"
+        logger.error "Registry JSON failed to parse: #{err}"
     else
       logger.error "Problem retrieving registry JSON: #{error}"
