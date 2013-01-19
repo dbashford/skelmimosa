@@ -1,11 +1,16 @@
 "use strict"
 
+newSkeleton = require('./lib/command/new')
+#search = require('./lib/command/search')
+#list = require('./lib/command/list')
+#choose = require('./lib/command/choose')
+
 exports.registerCommand = (program) ->
 
-  require('./lib/command/new')(program)
-  # require('./lib/command/search')(program)
-  # require('./lib/command/list')(program)
-  # require('./lib/command/choose')(program)
+  newSkeleton(program)
+  #search(program)
+  #list(program)
+  #choose(program)
 
 
 
