@@ -8,13 +8,6 @@ wrench = require "wrench"
 
 retrieveRegistry = require('../util').retrieveRegistry
 
-###
-1) If no input provided, take through prompt, show all skeletons
-2) Allow name of skeleton from registry
-3) Allow URL of skeleton from github
-4) Allow path to local skeleton for skel dev purposes
-###
-
 windowsDrive = /^[A-Za-z]:\\/
 _isSystemPath = (str) ->
   windowsDrive.test(str) or str.indexOf("/") is 0
@@ -25,30 +18,37 @@ _isGitHub = (s) ->
 _newSkeleton = (skeletonName, directory, opts) ->
   if opts.debug then logger.setDebug()
 
+  directory = "" unless directory?
+
   if _isGitHub(skeletonName)
     _cloneGitHub(skeletonName, directory)
   else if _isSystemPath(skeletonName)
     _moveDirectoryContents skeletonName, path.resolve directory
   else
     retrieveRegistry (registry) ->
-      if registry[skeletonName]
-        _cloneGitHub registry[skeletonName].url, directory
+      skels = registry.skels.filter (s) -> s.name is skeletonName
+      if skels.length is 1
+        logger.info "Found skeleton in registry"
+        _cloneGitHub skels[0].url, directory
       else
         logger.error "Unable to find skeleton matching name [[ #{skeletonName} ]]"
 
 _cloneGitHub = (skeletonName, directory) ->
-  logger.info "Cloning GitHub repo..."
+  logger.info "Cloning GitHub repo [[ #{skeletonName} ]]"
 
   exec "git clone #{skeletonName} #{directory}", (error, stdout, stderr) ->
     return logger.error "Error cloning git repo: #{stderr}" if error?
     rimraf (path.join directory, '.git'), (error) ->
-      logger.error error if error?
+      if error?
+        logger.error error
+      else
+        logger.success "Skeleton successfully cloned from GitHub."
 
 _moveDirectoryContents = (sourcePath, outPath) ->
   contents = wrench.readdirSyncRecursive(sourcePath).filter (p) ->
     p.indexOf('.git') isnt 0 or p.indexOf('.gitignore') is 0
 
-  unless fs.exists outPath
+  unless fs.existsSync outPath
     fs.mkdirSync outPath
 
   for item in contents
@@ -62,6 +62,8 @@ _moveDirectoryContents = (sourcePath, outPath) ->
       logger.debug "Copying file: [[ #{fullOutPath} ]]"
       fileContents = fs.readFileSync fullSourcePath
       fs.writeFileSync fullOutPath, fileContents
+
+  logger.success "Copied local skeleton to [[ #{outPath} ]]"
 
 register = (program) ->
   program
