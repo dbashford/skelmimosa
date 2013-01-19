@@ -1,5 +1,5 @@
 {
-  skels:[
+  "skels":[
     {
       "name":"test",
       "url":"git://github.com/dbashford/mimosa.git",
