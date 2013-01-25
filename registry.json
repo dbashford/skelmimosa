@@ -6,6 +6,13 @@
       "description":"This is a test; this is Mimosa not a skeleton",
       "author":"dbashford",
       "keywords":["mimosa", "skeleton", "workflow"]
+    },
+    {
+      "name":"durandal",
+      "url":"git://github.com/BlueSpire/Durandal-Mimosa-Skeleton.git",
+      "description":"A Durandal skeleton project with a basic navigation-style architecture pre-configured.",
+      "author":"EisenbergEffect",
+      "keywords":["mimosa", "skeleton", "durandal"]
     }
   ]
 }
