@@ -12,7 +12,7 @@
       "url":"git://github.com/BlueSpire/Durandal-Mimosa-Skeleton.git",
       "description":"A Durandal skeleton project with a basic navigation-style architecture pre-configured.",
       "author":"EisenbergEffect",
-      "keywords":["mimosa", "skeleton", "durandal"]
+      "keywords":["durandal","knockout","jquery","sammyjs","bootstrap","mvvm","mvp","mvc","navigation","router"]
     }
   ]
 }
