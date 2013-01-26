@@ -2,7 +2,6 @@
 path =   require "path"
 fs =     require "fs"
 
-rimraf = require 'rimraf'
 logger = require 'logmimosa'
 wrench = require "wrench"
 
@@ -18,12 +17,16 @@ _isGitHub = (s) ->
 _newSkeleton = (skeletonName, directory, opts) ->
   if opts.debug then logger.setDebug()
 
-  directory = "" unless directory?
+  directory = if directory?
+    path.join process.cwd(), directory
+  else
+    process.cwd()
 
   if _isGitHub(skeletonName)
     _cloneGitHub(skeletonName, directory)
   else if _isSystemPath(skeletonName)
-    _moveDirectoryContents skeletonName, path.resolve directory
+    _moveDirectoryContents skeletonName, directory
+    logger.success "Copied local skeleton to [[ #{directory} ]]"
   else
     retrieveRegistry (registry) ->
       skels = registry.skels.filter (s) -> s.name is skeletonName
@@ -31,18 +34,20 @@ _newSkeleton = (skeletonName, directory, opts) ->
         logger.info "Found skeleton in registry"
         _cloneGitHub skels[0].url, directory
       else
-        logger.error "Unable to find skeleton matching name [[ #{skeletonName} ]]"
+        logger.error "Unable to find a skeleton matching name [[ #{skeletonName} ]]"
 
 _cloneGitHub = (skeletonName, directory) ->
-  logger.info "Cloning GitHub repo [[ #{skeletonName} ]]"
+  logger.info "Cloning GitHub repo [[ #{skeletonName} ]] to temp holding directory."
 
-  exec "git clone #{skeletonName} #{directory}", (error, stdout, stderr) ->
+  exec "git clone #{skeletonName} temp-mimosa-skeleton-holding-directory", (error, stdout, stderr) ->
     return logger.error "Error cloning git repo: #{stderr}" if error?
-    rimraf (path.join directory, '.git'), (error) ->
-      if error?
-        logger.error error
-      else
-        logger.success "Skeleton successfully cloned from GitHub."
+
+    inPath = path.join process.cwd(),"temp-mimosa-skeleton-holding-directory"
+    logger.info "Moving cloned repo to  [[ #{directory} ]]."
+    _moveDirectoryContents inPath, directory
+    logger.info "Cleaning up..."
+    wrench.rmdirSyncRecursive inPath
+    logger.success "Skeleton successfully cloned from GitHub."
 
 _moveDirectoryContents = (sourcePath, outPath) ->
   contents = wrench.readdirSyncRecursive(sourcePath).filter (p) ->
@@ -62,8 +67,6 @@ _moveDirectoryContents = (sourcePath, outPath) ->
       logger.debug "Copying file: [[ #{fullOutPath} ]]"
       fileContents = fs.readFileSync fullSourcePath
       fs.writeFileSync fullOutPath, fileContents
-
-  logger.success "Copied local skeleton to [[ #{outPath} ]]"
 
 register = (program) ->
   program
