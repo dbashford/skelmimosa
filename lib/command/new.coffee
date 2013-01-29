@@ -4,6 +4,7 @@ fs =     require "fs"
 
 logger = require 'logmimosa'
 wrench = require "wrench"
+rimraf = require "rimraf"
 
 retrieveRegistry = require('../util').retrieveRegistry
 
@@ -46,8 +47,11 @@ _cloneGitHub = (skeletonName, directory) ->
     logger.info "Moving cloned repo to  [[ #{directory} ]]."
     _moveDirectoryContents inPath, directory
     logger.info "Cleaning up..."
-    wrench.rmdirSyncRecursive inPath
-    logger.success "Skeleton successfully cloned from GitHub."
+    rimraf inPath, (err) ->
+      if err
+        logger.error "An error occurred cleaning up the temporary holding directory", err
+      else
+        logger.success "Skeleton successfully cloned from GitHub."
 
 _moveDirectoryContents = (sourcePath, outPath) ->
   contents = wrench.readdirSyncRecursive(sourcePath).filter (p) ->
