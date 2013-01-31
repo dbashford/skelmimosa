@@ -49,7 +49,11 @@ _cloneGitHub = (skeletonName, directory) ->
     logger.info "Cleaning up..."
     rimraf inPath, (err) ->
       if err
-        logger.error "An error occurred cleaning up the temporary holding directory", err
+        if process.platform is 'win32'
+          logger.warn "A known Windows/Mimosa has made the directory at [[ #{inPath} ]] unremoveable. You will want to clean that up.  Apologies!"
+          logger.success "Skeleton successfully cloned from GitHub."
+        else
+          logger.error "An error occurred cleaning up the temporary holding directory", err
       else
         logger.success "Skeleton successfully cloned from GitHub."
 
