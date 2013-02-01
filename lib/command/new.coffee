@@ -16,7 +16,9 @@ _isGitHub = (s) ->
   s.indexOf("https://github") is 0 or s.indexOf("git@github") is 0 or s.indexOf("git://github") is 0
 
 _newSkeleton = (skeletonName, directory, opts) ->
-  if opts.debug then logger.setDebug()
+  if opts.debug
+    logger.setDebug()
+    process.env.DEBUG = true
 
   directory = if directory?
     path.join process.cwd(), directory
