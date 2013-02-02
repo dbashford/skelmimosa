@@ -1,11 +1,17 @@
 mimosa-skeleton
 ===========
 
+Mimosa needs skeletons! If you are using a cool suite of technologies and have a setup that you usually copy/paste around to get you started, then Mimosa needs you! Spend a little time and share your setup with other Mimosa users.  See the Contribute section below.
+
 ## Overview
 
-This module adds commands for dealing with Mimosa modules.  This module also contains the Mimosa skeleton registry file that is requested when dealing with skeletons.
+This module adds commands for dealing with Mimosa skeletons.  This module also contains the Mimosa skeleton registry file.
 
-For more information regarding Mimosa, see http://mimosajs.com.
+Skeletons are small starter Mimosa projects that include libraries (like, for instance, BootStrap or Backbone) and boilerplate code to jumpstart application development.
+
+Mimosa skeletons are hosted on GitHub, so this module has a dependency on git being installed and being available at the command line from the location the skeleton commands are executed.
+
+For more information regarding Mimosa in general, see http://mimosajs.com.
 
 ## Install
 
@@ -15,9 +21,7 @@ In the short term, to use this module, you'll need to execute the following comm
 mimosa mod:install mimosa-skeleton
 ```
 
-After it has been installed, all of the commands this module adds to Mimosa will become available.
-
-After a few skeletons have been created, this module will become a default Mimosa module.
+After it has been installed, all of the commands this module adds to Mimosa will become available. After a few skeletons have been created, this module will become a default Mimosa module.
 
 ## Functionality
 
@@ -40,6 +44,6 @@ This command takes a keyword as input, like `backbone`, and writes out all the s
 
 ## Contribute
 
-To contribute a skeleton, just submit a pull request or open an issue to get your skeleton added to the [registry](https://github.com/dbashford/mimosa-skeleton/blob/master/registry.json). I will curate the list ever so slightly. I don't care if you use Backbone or Ember or Angular or Batman, and I don't care how you organize your projects (that much)...but don't submit a Yeoman project. =)
+To contribute a skeleton, just submit a pull request or open an issue to get your skeleton added to the [registry](https://github.com/dbashford/mimosa-skeleton/blob/master/registry.json). I will curate the list but only barely. I don't care if you use Backbone or Ember or Angular or Batman, and I don't care how you organize your projects (that much)...but don't submit a Yeoman project. =)
 
-Your skeleton can be as in depth as possible.  You can provide a nodejs server stack if you wish.  Some example code is welcome, but don't write an entire ToDo app.  It shouldn't take someone using a skeleton an hour to slice out all the demo code before getting started with their own code.
+Your skeleton can be as in depth as you'd care to make it.  You can provide a nodejs server stack if you wish.  Example code is welcome, boilerplate code is definitely encouraged. But don't submit an entire app. It shouldn't take someone using a skeleton an hour to slice out all the demo code before getting started with their own stuff.
