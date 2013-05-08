@@ -22,7 +22,6 @@ exports.outputSkeletons = (skels) ->
   skels.forEach (skel) ->
     console.log "    #{color("Name:", "green+bold")}        #{color(skel.name, "blue+bold")}"
     console.log "    #{color("Description:", "green+bold")} #{skel.description}"
-    #console.log "    #{color("Author:", "green+bold")}      #{skel.author}"
     console.log "    #{color("URL:", "green+bold")}         #{skel.url}"
     console.log "    #{color("Keywords:", "green+bold")}    #{skel.keywords.join(', ')}"
     console.log color("\n  ---------------------------------------------------------------------------------------\n", "green+bold")
