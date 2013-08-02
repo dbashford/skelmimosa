@@ -1,4 +1,4 @@
-mimosa-skeleton
+skelmimosa
 ===========
 
 Mimosa needs skeletons! If you are using a cool suite of technologies and have a setup that you usually copy/paste around to get you started, then Mimosa needs you! Spend a little time and share your setup with other Mimosa users.  See the Contribute section below.
@@ -12,16 +12,6 @@ Skeletons are small starter Mimosa projects that include libraries (like, for in
 Mimosa skeletons are hosted on GitHub, so this module has a dependency on git being installed and being available at the command line from the location the skeleton commands are executed.
 
 For more information regarding Mimosa in general, see http://mimosajs.com.
-
-## Install
-
-In the short term, to use this module, you'll need to execute the following command:
-
-```
-mimosa mod:install mimosa-skeleton
-```
-
-After it has been installed, all of the commands this module adds to Mimosa will become available. After a few skeletons have been created, this module will become a default Mimosa module.
 
 ## Functionality
 
