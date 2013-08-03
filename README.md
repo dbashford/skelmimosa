@@ -34,6 +34,6 @@ This command takes a keyword as input, like `backbone`, and writes out all the s
 
 ## Contribute
 
-To contribute a skeleton, just submit a pull request or open an issue to get your skeleton added to the [registry](https://github.com/dbashford/mimosa-skeleton/blob/master/registry.json). I will curate the list but only barely. I don't care if you use Backbone or Ember or Angular or Batman, and I don't care how you organize your projects (that much)...but don't submit a Yeoman project. =)
+To contribute a skeleton, just submit a pull request or open an issue to get your skeleton added to the [registry](https://github.com/dbashford/mimosa-skeleton/blob/master/registry.json). I will curate the list but only barely. I don't care if you use Backbone or Ember or Angular or Batman, and I don't care how you organize your projects. All I might do is suggest tweaks to increase  hotness.
 
-Your skeleton can be as in depth as you'd care to make it.  You can provide a nodejs server stack if you wish.  Example code is welcome, boilerplate code is definitely encouraged. But don't submit an entire app. It shouldn't take someone using a skeleton an hour to slice out all the demo code before getting started with their own stuff.
+Your skeleton can be as in depth as you'd care to make it.  You can provide a nodejs server stack if you wish.  Example code is welcome, boilerplate code is definitely encouraged. But don't submit an entire enterprise app. It shouldn't take someone using a skeleton an hour to slice out all the demo code before getting started with their own stuff.
