@@ -5,14 +5,21 @@
       "url":"git://github.com/BlueSpire/Durandal-Mimosa-Skeleton.git",
       "description":"A Durandal skeleton project with a basic navigation-style architecture pre-configured.",
       "author":"BlueSpire",
-      "keywords":["durandal", "knockout", "jquery", "sammyjs", "bootstrap", "mvvm","mvp","mvc","navigation","router"]
+      "keywords":["durandal", "knockout", "jquery", "sammyjs", "bootstrap", "mvvm","mvp","mvc","navigation","router","requirejs"]
     },
     {
       "name":"ember-peepcode",
       "url":"git://github.com/breathe/mimosa-peepcode.git",
-      "description":"A port of the Peepcode Ember.js app to Mimosa. Uses Emblem for templates, Foundation, Stylus and CoffeeScript on the client. Bower for asset management. Testem and QUnit for testing, with Express/Jade on the server",
+      "description":"A port of the Peepcode Ember.js app to Mimosa. Uses Emblem for templates, Foundation, Stylus and CoffeeScript on the client. Bower for asset management. Testem and QUnit for testing, with Express/Jade on the server.",
       "author":"breathe",
       "keywords":["ember", "emberjs", "emblem", "handlebars", "coffeescript", "stylus", "foundation","testem","qunit","express","jade"]
+    },
+    {
+      "name":"ui-component",
+      "url":"git://github.com/dbashford/MimosaUIComponentSkeleton.git",
+      "description":"A starter app for developing and packaging reusable UI components using RequireJS. Utilizes Bower for package management and Testem, Mocha and Chai for testing component behavior. Written in CoffeeScript, but Mimosa handles any language.",
+      "author":"dbashford",
+      "keywords":["component", "ui", "coffeescript", "jquery", "testem","chai","mocha","bower","requirejs"]
     }
   ]
 }
