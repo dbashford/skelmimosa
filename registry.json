@@ -55,6 +55,34 @@
       "tests":"mocha",
       "testRunner":"testem",
       "requirejs":true
+    },
+    {
+      "name":"mimosa-module-javascript",
+      "url":"git://github.com/dbashford/MimosaModuleJavaScriptSkeleton.git",
+      "description":"A simple starter skeleton for building a Mimosa module using JavaScript",
+      "author":"dbashford",
+      "keywords":["mimosa", "module", "javascript"],
+      "server":null,
+      "lang":"javascript",
+      "clientmvc":null,
+      "cssframework":null,
+      "tests":null,
+      "testRunner":null,
+      "requirejs":false
+    },
+    {
+      "name":"mimosa-module-coffeescript",
+      "url":"git://github.com/dbashford/MimosaModuleCoffeeScriptSkeleton.git",
+      "description":"A simple starter skeleton for building a Mimosa module using CoffeeScript",
+      "author":"dbashford",
+      "keywords":["mimosa", "module", "coffeescript"],
+      "server":null,
+      "lang":"coffeescript",
+      "clientmvc":null,
+      "cssframework":null,
+      "tests":null,
+      "testRunner":null,
+      "requirejs":false
     }
   ]
 }
