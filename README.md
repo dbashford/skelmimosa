@@ -11,7 +11,7 @@ Skeletons are small starter Mimosa projects that include libraries (like, for in
 
 Mimosa skeletons are hosted on GitHub, so this module has a dependency on git being installed and being available at the command line from the location the skeleton commands are executed.
 
-For more information regarding Mimosa in general, see http://mimosajs.com.
+For more information regarding Mimosa in general, see http://mimosa.io.
 
 ## Functionality
 
