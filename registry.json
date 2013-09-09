@@ -13,6 +13,7 @@
       "tests":null,
       "testRunner":null,
       "requirejs":true
+      "commonjs":false
     },
     {
       "name":"durandal",
@@ -27,6 +28,7 @@
       "tests":null,
       "testRunner":null,
       "requirejs":true
+      "commonjs":false
     },
     {
       "name":"ember-peepcode",
@@ -40,7 +42,8 @@
       "cssframework":"foundation",
       "tests":"qunit",
       "testRunner":"testem",
-      "requirejs":false
+      "requirejs":false,
+      "commonjs":false
     },
     {
       "name":"ui-component",
@@ -54,7 +57,8 @@
       "cssframework":null,
       "tests":"mocha",
       "testRunner":"testem",
-      "requirejs":true
+      "requirejs":true,
+      "commonjs":false
     },
     {
       "name":"mimosa-module-javascript",
@@ -68,7 +72,8 @@
       "cssframework":null,
       "tests":null,
       "testRunner":null,
-      "requirejs":false
+      "requirejs":false,
+      "commonjs":true
     },
     {
       "name":"mimosa-module-coffeescript",
@@ -82,7 +87,38 @@
       "cssframework":null,
       "tests":null,
       "testRunner":null,
-      "requirejs":false
+      "requirejs":false,
+      "commonjs":true
+    },
+    {
+      "name":"browserify-basic",
+      "url":"git://github.com/JonET/mimosa-browserify-example.git",
+      "description":"A basic 'mimosa new' app but assembled using browserify and commonjs instead of AMD/RequireJS",
+      "author":"JonET",
+      "keywords":["bower", "browserify", "commonjs", "dust", "coffeescript", "stylus"],
+      "server":null,
+      "lang":"coffeescript",
+      "clientmvc":null,
+      "cssframework":null,
+      "tests":null,
+      "testRunner":null,
+      "requirejs":false,
+      "commonjs":true
+    },
+    {
+      "name":"ember-commonjs",
+      "url":"git://github.com/JonET/mimosa-ember-commonjs.git",
+      "description":"A starter app for Ember.js using browserify to perform bundling of assets.",
+      "author":"JonET",
+      "keywords":["bower", "browserify", "commonjs", "handlebars", "coffeescript", "stylus"],
+      "server":null,
+      "lang":"coffeescript",
+      "clientmvc":null,
+      "cssframework":null,
+      "tests":null,
+      "testRunner":null,
+      "requirejs":false,
+      "commonjs":true
     }
   ]
 }
