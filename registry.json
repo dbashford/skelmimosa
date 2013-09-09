@@ -12,7 +12,7 @@
       "cssframework":"bootstrap",
       "tests":null,
       "testRunner":null,
-      "requirejs":true
+      "requirejs":true,
       "commonjs":false
     },
     {
@@ -27,7 +27,7 @@
       "cssframework":"bootstrap",
       "tests":null,
       "testRunner":null,
-      "requirejs":true
+      "requirejs":true,
       "commonjs":false
     },
     {
