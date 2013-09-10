@@ -76,6 +76,21 @@
       "commonjs":true
     },
     {
+      "name":"zappa-basic",
+      "url":"git://github.com/dbashford/MimosaZappaSkeleton.git",
+      "description":"A 'mimosa new' basic app, but with a Zappa server instead of Express.",
+      "author":"dbashford",
+      "keywords":["bower", "handlebars", "coffeescript", "stylus", "zappa", "zappajs"],
+      "server":"Zappa",
+      "lang":"coffeescript",
+      "clientmvc":null,
+      "cssframework":null,
+      "tests":null,
+      "testRunner":null,
+      "requirejs":true,
+      "commonjs":false
+    },
+    {
       "name":"ui-component",
       "url":"git://github.com/dbashford/MimosaUIComponentSkeleton.git",
       "description":"A starter app for developing and packaging reusable UI components using RequireJS. Utilizes Bower for package management and Testem, Mocha and Chai for testing component behavior. Written in CoffeeScript, but Mimosa handles any language.",
