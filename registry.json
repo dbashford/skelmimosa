@@ -140,7 +140,7 @@
       "url":"git://github.com/kevin-buttercoin/buttercoin-angular-node-mimosa-skeleton.git,
       "description":"Node and Angular skeleton using Coffeescript and featuring live-reload, bootstrap integration, profiles, mimosa-bower config, and mimosa-combine",
       "author":"kevin-buttercoin",
-      "keywords":["mimosa", "module", "coffeescript", "angular", "node", "bower", "express"],
+      "keywords":["mimosa", "module", "coffeescript", "angular", "node", "bower", "express", "profiles"],
       "server":"Express",
       "lang":"coffeescript",
       "clientmvc":"Angular",
