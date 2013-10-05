@@ -121,6 +121,22 @@
       "commonjs":true
     },
     {
+      "name":"mimosa-backbone-topcoat",
+      "url":"git://github.com/mftaher/mimosa-backbone-topcoat.git",
+      "description":"A simple starter skeleton for building a Mimosa module using Backbone and Topcoat",
+      "author":"mftaher",
+      "keywords":["mimosa", "backbone", "javascript", "topcoat", "coffeescript", "stylus"],
+      "server":null,
+      "lang":"javascript",
+      "clientmvc":true,
+      "cssframework":null,
+      "tests":null,
+      "testRunner":null,
+      "requirejs":true,
+      "commonjs":false
+    },
+
+    {
       "name":"mimosa-module-coffeescript",
       "url":"git://github.com/dbashford/MimosaModuleCoffeeScriptSkeleton.git",
       "description":"A simple starter skeleton for building a Mimosa module using CoffeeScript",
