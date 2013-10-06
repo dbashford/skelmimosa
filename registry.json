@@ -151,7 +151,7 @@
       "commonjs":true
     },
     {
-      "name":"buttercoin-angular-node-mimosa-skeleton",
+      "name":"angular-node",
       "url":"git://github.com/kevin-buttercoin/buttercoin-angular-node-mimosa-skeleton.git",
       "description":"Node and Angular skeleton using Coffeescript and featuring live-reload, bootstrap integration, profiles, mimosa-bower config, and mimosa-combine",
       "author":"kevin-buttercoin",
