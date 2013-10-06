@@ -46,21 +46,6 @@
       "commonjs":false
     },
     {
-      "name":"browserify-basic",
-      "url":"git://github.com/JonET/mimosa-browserify-example.git",
-      "description":"A basic 'mimosa new' app but assembled using browserify and commonjs instead of AMD/RequireJS",
-      "author":"JonET",
-      "keywords":["bower", "browserify", "commonjs", "dust", "coffeescript", "stylus"],
-      "server":null,
-      "lang":"coffeescript",
-      "clientmvc":null,
-      "cssframework":null,
-      "tests":null,
-      "testRunner":null,
-      "requirejs":false,
-      "commonjs":true
-    },
-    {
       "name":"ember-commonjs",
       "url":"git://github.com/JonET/mimosa-ember-commonjs.git",
       "description":"A starter app for Ember.js using browserify to perform bundling of assets.",
@@ -69,6 +54,21 @@
       "server":null,
       "lang":"coffeescript",
       "clientmvc":"ember",
+      "cssframework":null,
+      "tests":null,
+      "testRunner":null,
+      "requirejs":false,
+      "commonjs":true
+    },
+    {
+      "name":"browserify-basic",
+      "url":"git://github.com/JonET/mimosa-browserify-example.git",
+      "description":"A basic 'mimosa new' app but assembled using browserify and commonjs instead of AMD/RequireJS",
+      "author":"JonET",
+      "keywords":["bower", "browserify", "commonjs", "dust", "coffeescript", "stylus"],
+      "server":null,
+      "lang":"coffeescript",
+      "clientmvc":null,
       "cssframework":null,
       "tests":null,
       "testRunner":null,
