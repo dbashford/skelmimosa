@@ -76,6 +76,36 @@
       "commonjs":true
     },
     {
+      "name":"backbone-topcoat",
+      "url":"git://github.com/mftaher/mimosa-backbone-topcoat.git",
+      "description":"A simple starter skeleton for building a Mimosa module using Backbone and Topcoat",
+      "author":"mftaher",
+      "keywords":["mimosa", "backbone", "javascript", "topcoat", "coffeescript", "stylus"],
+      "server": "express",
+      "lang":"coffeescript",
+      "clientmvc": "backbone",
+      "cssframework": "topcoat",
+      "tests":null,
+      "testRunner":null,
+      "requirejs":true,
+      "commonjs":false
+    },
+    {
+      "name":"angular-node",
+      "url":"git://github.com/kevin-buttercoin/buttercoin-angular-node-mimosa-skeleton.git",
+      "description":"Node and Angular skeleton using Coffeescript and featuring live-reload, bootstrap integration, profiles, mimosa-bower config, and mimosa-combine",
+      "author":"kevin-buttercoin",
+      "keywords":["mimosa", "module", "coffeescript", "angular", "node", "bower", "express", "profiles"],
+      "server":"express",
+      "lang":"coffeescript",
+      "clientmvc":"Angular",
+      "cssframework":"bootstrap",
+      "tests":null,
+      "testRunner":null,
+      "requirejs":true,
+      "commonjs":true
+    },
+    {
       "name":"zappa-basic",
       "url":"git://github.com/dbashford/MimosaZappaSkeleton.git",
       "description":"A 'mimosa new' basic app, but with a Zappa server instead of Express.",
@@ -133,36 +163,6 @@
       "tests":null,
       "testRunner":null,
       "requirejs":false,
-      "commonjs":true
-    },
-    {
-      "name":"backbone-topcoat",
-      "url":"git://github.com/mftaher/mimosa-backbone-topcoat.git",
-      "description":"A simple starter skeleton for building a Mimosa module using Backbone and Topcoat",
-      "author":"mftaher",
-      "keywords":["mimosa", "backbone", "javascript", "topcoat", "coffeescript", "stylus"],
-      "server": "express",
-      "lang":"coffeescript",
-      "clientmvc": "backbone",
-      "cssframework": "topcoat",
-      "tests":null,
-      "testRunner":null,
-      "requirejs":true,
-      "commonjs":false
-    },
-    {
-      "name":"angular-node",
-      "url":"git://github.com/kevin-buttercoin/buttercoin-angular-node-mimosa-skeleton.git",
-      "description":"Node and Angular skeleton using Coffeescript and featuring live-reload, bootstrap integration, profiles, mimosa-bower config, and mimosa-combine",
-      "author":"kevin-buttercoin",
-      "keywords":["mimosa", "module", "coffeescript", "angular", "node", "bower", "express", "profiles"],
-      "server":"express",
-      "lang":"coffeescript",
-      "clientmvc":"Angular",
-      "cssframework":"bootstrap",
-      "tests":null,
-      "testRunner":null,
-      "requirejs":true,
       "commonjs":true
     }
   ]
