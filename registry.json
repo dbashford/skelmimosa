@@ -179,6 +179,21 @@
       "testRunner":null,
       "requirejs":false,
       "commonjs":true
+    },
+    {
+      "name":"mimosa-emberboots",
+      "url":"git://github.com/anachron/mimosa-emberboots.git",
+      "description":"Mimosa-Skeleton for EmberJS, Bootstrap, Font-Awesome, Jade, Emblem, Less and Express-Apps.",
+      "author":"Anachron",
+      "keywords":["mimosa", "module", "coffeescript", "emberjs", "Font-Awesome", "Jade", "Emblem", "Less", "Express"],
+      "server":"express",
+      "lang":"coffeescript",
+      "clientmvc":"ember",
+      "cssframework":"less",
+      "tests":null,
+      "testRunner":null,
+      "requirejs":true,
+      "commonjs":false
     }
   ]
 }
