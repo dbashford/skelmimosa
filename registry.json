@@ -194,6 +194,21 @@
       "testRunner":null,
       "requirejs":false,
       "commonjs":true
+    },
+    {
+      "name":"mimosa-minimal",
+      "url":"git://github.com/lachenmayer/mimosa-minimal.git",
+      "description":"Super-minimal Mimosa template for your super-quick hacks. Creates a single index.html file which includes a single JS and style file. No server.",
+      "author":"lachenmayer",
+      "keywords":["coffeescript", "stylus", "minimal", "clientside"],
+      "server":null,
+      "lang":"coffeescript",
+      "clientmvc":null,
+      "cssframework":null,
+      "tests":null,
+      "testRunner":null,
+      "requirejs":true,
+      "commonjs":false
     }
   ]
 }
