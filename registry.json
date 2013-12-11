@@ -196,19 +196,19 @@
       "commonjs":true
     },
     {
-      "name":"mimosa-minimal",
+      "name":"minimal",
       "url":"git://github.com/lachenmayer/mimosa-minimal.git",
-      "description":"Super-minimal Mimosa template for your super-quick hacks. Creates a single index.html file which includes a single JS and style file. No server.",
+      "description":"Super-minimal Mimosa template for your super-quick hacks. Single index.jade, main.coffee and style.styl without any extra baggage.",
       "author":"lachenmayer",
-      "keywords":["coffeescript", "stylus", "minimal", "clientside"],
-      "server":null,
+      "keywords":["coffeescript", "stylus", "jade", "minimal", "clientside"],
+      "server":"Mimosa Embedded",
       "lang":"coffeescript",
       "clientmvc":null,
-      "cssframework":null,
+      "cssframework":"stylus",
       "tests":null,
       "testRunner":null,
       "requirejs":true,
-      "commonjs":false
+      "commonjs":true
     }
   ]
 }
