@@ -209,6 +209,21 @@
       "testRunner":null,
       "requirejs":true,
       "commonjs":true
+    },
+    {
+      "name":"markdown-math",
+      "url":"https://github.com/xixixao/mimosa-markdown-math",
+      "description":"A simple skeleton for markdown including math formulas.",
+      "author":"xixixao",
+      "keywords":["coffeescript", "stylus", "jade", "markdown", "marked", "mathjax", "asciimath", "minimal", "clientside"],
+      "server":"Mimosa Embedded",
+      "lang":"coffeescript",
+      "clientmvc":null,
+      "cssframework":"stylus",
+      "tests":null,
+      "testRunner":null,
+      "requirejs":true,
+      "commonjs":true
     }
   ]
 }
