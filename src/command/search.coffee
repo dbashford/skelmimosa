@@ -38,9 +38,8 @@ register = (program) ->
   program
     .command('skel:search <keyword>')
     .description("Search for skeletons using keywords")
-    .option("-D, --debug", "run in debug mode")
     .action(_search)
-    .on '--help', =>
+    .on '--help', ->
       logger.green('  The skel:search will search the skeletons in the registry using the provided')
       logger.green('  keyword and list only those skeletons that have the keyword. Use this command')
       logger.green('  if you want to find skeletons that contain a specific technology.')

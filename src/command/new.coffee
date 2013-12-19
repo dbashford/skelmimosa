@@ -16,7 +16,8 @@ _isGitHub = (s) ->
   s.indexOf("https://github") is 0 or s.indexOf("git@github") is 0 or s.indexOf("git://github") is 0
 
 _newSkeleton = (skeletonName, directory, opts) ->
-  if opts.debug
+  if opts.mdebug
+    opts.debug = true
     logger.setDebug()
     process.env.DEBUG = true
 
@@ -82,7 +83,7 @@ register = (program) ->
   program
     .command('skel:new <skeletonName> [directory]')
     .description("Create a Mimosa project using a skeleton")
-    .option("-D, --debug", "run in debug mode")
+    .option("-D, --mdebug", "run in debug mode")
     .action(_newSkeleton)
     .on '--help', =>
       logger.green('  The skel:new command will create a new project using a Mimosa skeleton of your choice.')

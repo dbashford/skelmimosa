@@ -21,7 +21,6 @@ register = (program) ->
   program
     .command('skel:list')
     .description("List all skeletons")
-    .option("-D, --debug", "run in debug mode")
     .action(_list)
     .on '--help', =>
       logger.green('  The skel:list will list all of the skeletons in the skeleton registry.')
