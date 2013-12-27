@@ -239,6 +239,21 @@
       "testRunner":null,
       "requirejs":true,
       "commonjs":true
+    },
+    {
+      "name":"hyper",
+      "url":"https://github.com/xixixao/mimosa-hyper",
+      "description":"A minimal skeleton for using React.js in CoffeeScript via Hyper",
+      "author":"xixixao",
+      "keywords":["coffeescript", "stylus", "jade", "react", "hyper"],
+      "server":"Mimosa Embedded",
+      "lang":"coffeescript",
+      "clientmvc":"react",
+      "cssframework":"stylus",
+      "tests":null,
+      "testRunner":null,
+      "requirejs":true,
+      "commonjs":true
     }
   ]
 }
