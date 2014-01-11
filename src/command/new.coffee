@@ -22,7 +22,10 @@ _newSkeleton = (skeletonName, directory, opts) ->
     process.env.DEBUG = true
 
   directory = if directory?
-    path.join process.cwd(), directory
+    if _isSystemPath(directory)
+      directory
+    else
+      path.join process.cwd(), directory
   else
     process.cwd()
 
@@ -42,6 +45,9 @@ _newSkeleton = (skeletonName, directory, opts) ->
 
 _cloneGitHub = (skeletonName, directory) ->
   logger.info "Cloning GitHub repo [[ #{skeletonName} ]] to temp holding directory."
+
+
+  wrench.rmdirSyncRecursive path.join(process.cwd(), "temp-mimosa-skeleton-holding-directory"), true
 
   exec "git clone #{skeletonName} temp-mimosa-skeleton-holding-directory", (error, stdout, stderr) ->
     return logger.error "Error cloning git repo: #{stderr}" if error?
@@ -65,7 +71,7 @@ _moveDirectoryContents = (sourcePath, outPath) ->
     p.indexOf('.git') isnt 0 or p.indexOf('.gitignore') is 0
 
   unless fs.existsSync outPath
-    fs.mkdirSync outPath
+    wrench.mkdirSyncRecursive outPath, 0o0777
 
   for item in contents
     fullSourcePath = path.join sourcePath, item
