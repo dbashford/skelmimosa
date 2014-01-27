@@ -46,7 +46,6 @@ _newSkeleton = (skeletonName, directory, opts) ->
 _cloneGitHub = (skeletonName, directory) ->
   logger.info "Cloning GitHub repo [[ #{skeletonName} ]] to temp holding directory."
 
-
   wrench.rmdirSyncRecursive path.join(process.cwd(), "temp-mimosa-skeleton-holding-directory"), true
 
   exec "git clone #{skeletonName} temp-mimosa-skeleton-holding-directory", (error, stdout, stderr) ->
@@ -56,6 +55,7 @@ _cloneGitHub = (skeletonName, directory) ->
     logger.info "Moving cloned repo to  [[ #{directory} ]]."
     _moveDirectoryContents inPath, directory
     logger.info "Cleaning up..."
+    _cleanup directory
     rimraf inPath, (err) ->
       if err
         if process.platform is 'win32'
@@ -84,6 +84,16 @@ _moveDirectoryContents = (sourcePath, outPath) ->
       logger.debug "Copying file: [[ #{fullOutPath} ]]"
       fileContents = fs.readFileSync fullSourcePath
       fs.writeFileSync fullOutPath, fileContents
+
+  _cleanup outPath
+
+_cleanup = (outPath) ->
+  wrench.readdirSyncRecursive(outPath).filter (p) ->
+    path.basename(p) is '.gitkeep'
+  .map (p) ->
+    path.join outPath, p
+  .forEach (p) ->
+    fs.unlinkSync p
 
 register = (program) ->
   program
