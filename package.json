@@ -1,6 +1,6 @@
 {
   "name": "skelmimosa",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "homepage": "https://github.com/dbashford/mimosa-skeleton",
   "author": "David Bashford",
   "description": "A skeleton module for Mimosa",
@@ -20,11 +20,11 @@
     "skeleton"
   ],
   "dependencies": {
-    "logmimosa": "0.5.0",
-    "request": "2.21.0",
-    "wrench": "1.5.1",
+    "logmimosa": "0.6.0",
+    "request": "2.33.0",
+    "wrench": "1.5.6",
     "ansi-color": "0.2.1",
-    "rimraf": "2.2.2"
+    "rimraf": "2.2.6"
   },
   "license": "MIT",
   "engines": {
