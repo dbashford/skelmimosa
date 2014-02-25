@@ -254,6 +254,21 @@
       "testRunner":null,
       "requirejs":true,
       "commonjs":false
+    },
+    {
+      "name":"webapp",
+      "url":"https://github.com/dbashford/MimosaWebAppSkeleton",
+      "description":"A starter skeleton with all the key Mimosa modules for getting started. Info in the docs!",
+      "author":"dbashford",
+      "keywords":["requirejs"],
+      "server":"Express",
+      "lang":"javascript",
+      "clientmvc":null,
+      "cssframework":null,
+      "tests":"mocha",
+      "testRunner":"testem",
+      "requirejs":true,
+      "commonjs":false
     }
   ]
 }
