@@ -2,11 +2,11 @@
 path =   require "path"
 fs =     require "fs"
 
-logger = require 'logmimosa'
 wrench = require "wrench"
 rimraf = require "rimraf"
 
 retrieveRegistry = require('../util').retrieveRegistry
+logger = null
 
 windowsDrive = /^[A-Za-z]:\\/
 _isSystemPath = (str) ->
@@ -35,7 +35,7 @@ _newSkeleton = (skeletonName, directory, opts) ->
     _moveDirectoryContents skeletonName, directory
     logger.success "Copied local skeleton to [[ #{directory} ]]"
   else
-    retrieveRegistry (registry) ->
+    retrieveRegistry logger, (registry) ->
       skels = registry.skels.filter (s) -> s.name is skeletonName
       if skels.length is 1
         logger.info "Found skeleton in registry"
@@ -95,7 +95,8 @@ _cleanup = (outPath) ->
   .forEach (p) ->
     fs.unlinkSync p
 
-register = (program) ->
+module.exports = (program, _logger) ->
+  logger = _logger
   program
     .command('skel:new <skeletonName> [directory]')
     .description("Create a Mimosa project using a skeleton")
@@ -111,5 +112,3 @@ register = (program) ->
       logger.green('  not exist, Mimosa will create it. If the directory is not provided, the skeleton will be')
       logger.green('  placed in the current directory.')
       logger.blue( '\n    $ mimosa skel:new <skeletonName> <directory>\n')
-
-module.exports = (program) -> register(program)

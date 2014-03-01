@@ -1,9 +1,7 @@
 request = require 'request'
 color = require('ansi-color').set
 
-logger = require 'logmimosa'
-
-exports.retrieveRegistry = (callback) ->
+exports.retrieveRegistry = (logger, callback) ->
   logger.info "Retrieving registry..."
 
   request 'https://raw.github.com/dbashford/mimosa-skeleton/master/registry.json', (error, response, body) ->

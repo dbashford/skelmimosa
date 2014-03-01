@@ -1,13 +1,13 @@
-logger = require 'logmimosa'
 color = require('ansi-color').set
 
 util = require('../util')
 retrieveRegistry = util.retrieveRegistry
 outputSkeletons = util.outputSkeletons
+logger = null
 
 _search = (keyword) ->
   keyword = keyword.toLowerCase()
-  retrieveRegistry (registry) ->
+  retrieveRegistry logger, (registry) ->
 
     skels = registry.skels.filter (skel) ->
       keywordIndex = skel.keywords.map((k) -> k.toLowerCase()).indexOf(keyword)
@@ -34,7 +34,8 @@ _search = (keyword) ->
 
     outputSkeletons skels
 
-register = (program) ->
+module.exports = (program, _logger) ->
+  logger = _logger
   program
     .command('skel:search <keyword>')
     .description("Search for skeletons using keywords")
@@ -44,5 +45,3 @@ register = (program) ->
       logger.green('  keyword and list only those skeletons that have the keyword. Use this command')
       logger.green('  if you want to find skeletons that contain a specific technology.')
       logger.blue( '\n    $ mimosa skel:search backbone\n')
-
-module.exports = (program) -> register(program)
