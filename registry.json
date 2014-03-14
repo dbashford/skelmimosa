@@ -256,6 +256,21 @@
       "commonjs":false
     },
     {
+      "name":"react-backbone",
+      "url":"https://github.com/dbashford/MimosaReactBackboneTodoList",
+      "description":"A Mimosa skeleton integrating React, Backbone, Require.js, and Bower into a Todo App.",
+      "author":"dbashford",
+      "keywords":["jade", "react", "backbone", "bower", "express", "todo"],
+      "server":"Express",
+      "lang":"javascript",
+      "clientmvc":"backbone",
+      "cssframework":"css",
+      "tests":null,
+      "testRunner":null,
+      "requirejs":true,
+      "commonjs":false
+    },
+    {
       "name":"webapp",
       "url":"https://github.com/dbashford/MimosaWebAppSkeleton",
       "description":"A starter skeleton with all the key Mimosa modules for getting started. Info in the docs!",
