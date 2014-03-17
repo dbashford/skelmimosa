@@ -284,6 +284,21 @@
       "testRunner":"testem",
       "requirejs":true,
       "commonjs":false
+    },
+    {
+      "name":"angularjs-bootstrap-karma",
+      "url":"https://github.com/idursun/mimosa-angular-karma-bootstrap-skeleton",
+      "description":"A skeleton for mimosa with angular, bootstrap, less and karma",
+      "author":"idursun",
+      "keywords":["requirejs","karma","angularjs","express","less","bootstrap"],
+      "server":"Express",
+      "lang":"javascript",
+      "clientmvc": "Angular",
+      "cssframework":"bootstrap",
+      "tests":"jasmine",
+      "testRunner":"karma",
+      "requirejs":true,
+      "commonjs":false
     }
   ]
 }
