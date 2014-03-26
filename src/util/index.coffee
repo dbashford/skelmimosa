@@ -1,18 +1,25 @@
 request = require 'request'
 color = require('ansi-color').set
+childProcess = require('child_process')
 
 exports.retrieveRegistry = (logger, callback) ->
   logger.info "Retrieving registry..."
-
-  request 'https://raw.github.com/dbashford/mimosa-skeleton/master/registry.json', (error, response, body) ->
-    if not error and response.statusCode is 200
-      try
-        registry = JSON.parse body
-        callback registry
-      catch err
-        logger.error "Registry JSON failed to parse: #{err}"
-    else
-      logger.error "Problem retrieving registry JSON: #{error}"
+  childProcess.exec 'npm config get https-proxy', (error, stdout, stderr) ->
+    options = {
+      'uri': 'https://raw.github.com/dbashford/mimosa-skeleton/master/registry.json'
+    }
+    proxy = stdout.replace /(\r\n|\n\r|\n)/gm, ''
+    if !error && proxy != 'null'
+      options.proxy = proxy
+    request options, (error, response, body) ->
+      if error == null && response.statusCode == 200
+        try
+          registry = JSON.parse body
+          callback registry
+        catch err
+          logger.error "Registry JSON failed to parse: #{err}"
+      else
+        logger.error "Problem retrieving registry JSON: #{error}"
 
 exports.outputSkeletons = (skels) ->
 
