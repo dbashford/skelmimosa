@@ -299,6 +299,21 @@
       "testRunner":"karma",
       "requirejs":true,
       "commonjs":false
+    },
+    {
+      "name":"mimosa-module-livescript",
+      "url":"git@github.com:dbashford/MimosaModuleCoffeeScriptSkeleton.git",
+      "description":"A simple starter skeleton for building a Mimosa module using LiveScript",
+      "author":"ifraixedes",
+      "keywords":["mimosa", "module", "LiveScript"],
+      "server":null,
+      "lang":"livescript",
+      "clientmvc":null,
+      "cssframework":null,
+      "tests":null,
+      "testRunner":null,
+      "requirejs":false,
+      "commonjs":true
     }
   ]
 }
