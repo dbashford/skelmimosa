@@ -302,7 +302,7 @@
     },
     {
       "name":"mimosa-module-livescript",
-      "url":"git@github.com:dbashford/MimosaModuleCoffeeScriptSkeleton.git",
+      "url":"git@github.com:ifraixedes/mimosa-module-livescript-skeleton.git",
       "description":"A simple starter skeleton for building a Mimosa module using LiveScript",
       "author":"ifraixedes",
       "keywords":["mimosa", "module", "LiveScript"],
