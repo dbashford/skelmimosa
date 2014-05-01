@@ -106,6 +106,21 @@
       "commonjs":false
     },
     {
+      "name":"marionette-semantic",
+      "url":"git://github.com/Anachron/mimosa-marionette.git",
+      "description":"Advanced Skeleton for Mimosa (buildtool), using Marionette (Framework), RequireJS (+CSS, +HBS), Express (Server), Jade (Server-Template), Bower (Component Handling), CoffeeScript (JS-Metalang), LESS (CSS-Metalang), Semantic-UI (CSS-Framework), and more.",
+      "author":"Anachron",
+      "keywords":["mimosa", "module", "coffeescript", "marionette", "semantic-ui", "jade", "bower", "less", "express", "require", "handlebars"],
+      "server":"express",
+      "lang":"coffeescript",
+      "clientmvc":"marionette",
+      "cssframework":"less",
+      "tests":"mocha",
+      "testRunner":"testem",
+      "requirejs":true,
+      "commonjs":false
+    },
+    {
       "name":"browserify-basic",
       "url":"git://github.com/JonET/mimosa-browserify-example.git",
       "description":"A basic 'mimosa new' app but assembled using browserify and commonjs instead of AMD/RequireJS",
