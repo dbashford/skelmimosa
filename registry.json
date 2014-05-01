@@ -110,7 +110,7 @@
       "url":"git://github.com/Anachron/mimosa-marionette.git",
       "description":"Advanced Skeleton for Mimosa (buildtool), using Marionette (Framework), RequireJS (+CSS, +HBS), Express (Server), Jade (Server-Template), Bower (Component Handling), CoffeeScript (JS-Metalang), LESS (CSS-Metalang), Semantic-UI (CSS-Framework), and more.",
       "author":"Anachron",
-      "keywords":["mimosa", "module", "coffeescript", "marionette", "semantic-ui", "jade", "bower", "less", "express", "require", "handlebars"],
+      "keywords":["coffeescript", "marionette", "semantic-ui", "jade", "bower", "less", "express", "require", "handlebars"],
       "server":"express",
       "lang":"coffeescript",
       "clientmvc":"marionette",
