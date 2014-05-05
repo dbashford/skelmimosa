@@ -1,5 +1,3 @@
-color = require('ansi-color').set
-
 util = require('../util')
 retrieveRegistry = util.retrieveRegistry
 outputSkeletons = util.outputSkeletons
@@ -12,6 +10,7 @@ _search = (keyword) ->
     skels = registry.skels.filter (skel) ->
       keywordIndex = skel.keywords.map((k) -> k.toLowerCase()).indexOf(keyword)
       if keywordIndex > -1
+        color = require('ansi-color').set
         skel.keywords[keywordIndex] = color(skel.keywords[keywordIndex], "blue+bold")
         true
       else

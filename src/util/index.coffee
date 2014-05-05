@@ -1,8 +1,7 @@
-request = require 'request'
-color = require('ansi-color').set
-childProcess = require('child_process')
+retrieveRegistry = (logger, callback) ->
+  request = require 'request'
+  childProcess = require('child_process')
 
-exports.retrieveRegistry = (logger, callback) ->
   logger.info "Retrieving registry..."
   childProcess.exec 'npm config get https-proxy', (error, stdout, stderr) ->
     options = {
@@ -21,7 +20,8 @@ exports.retrieveRegistry = (logger, callback) ->
       else
         logger.error "Problem retrieving registry JSON: #{error}"
 
-exports.outputSkeletons = (skels) ->
+outputSkeletons = (skels) ->
+  color = require('ansi-color').set
 
   console.log color("  -----------------------------------------------------", "green+bold")
   skels.forEach (skel) ->
@@ -30,3 +30,7 @@ exports.outputSkeletons = (skels) ->
     console.log "  #{color("URL:", "green+bold")}         #{skel.url}"
     console.log "  #{color("Keywords:", "green+bold")}    #{skel.keywords.join(', ')}"
     console.log color("  -----------------------------------------------------", "green+bold")
+
+module.exports =
+  outputSkeletons: outputSkeletons
+  retrieveRegistry: retrieveRegistry
