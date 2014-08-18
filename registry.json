@@ -359,6 +359,21 @@
       "testRunner":"testem",
       "requirejs":true,
       "commonjs":false
+    },
+    {
+      "name":"browserify-hapi-angular",
+      "url":"https://github.com/rclayton/mimosa-browserify-hapi-angular",
+      "description":"Mimosa Skeleton for Browserify, Hapi, AngularJS, and Bootstrap.",
+      "author":"rclayton",
+      "keywords":["angularjs", "angular-ui-router", "hapi", "browserify", "bootstrap", "coffeescript", "stylus"],
+      "server":"Hapi.js",
+      "lang":"coffeescript",
+      "clientmvc": "Angular",
+      "cssframework": "bootstrap",
+      "tests": null,
+      "testRunner": null,
+      "requirejs":false,
+      "commonjs":true
     }
   ]
 }
