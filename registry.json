@@ -76,6 +76,21 @@
       "commonjs":true
     },
     {
+      "name":"ember",
+      "url":"https://github.com/dbashford/MimosaEmberSkeleton",
+      "description":"A port of the Ember Blogger example. Uses ES6 modules, automatic ember manifest generation, sass, Express and comes ready to optimize and bundle.",
+      "author":"dbashford",
+      "keywords":["ember", "emberjs", "handlebars", "es6", "sass", "express"],
+      "server":"express",
+      "lang":"javascript",
+      "clientmvc":"ember",
+      "cssframework":"bootstrap",
+      "tests":null,
+      "testRunner":null,
+      "requirejs":true,
+      "commonjs":false
+    },
+    {
       "name":"ember-peepcode",
       "url":"git://github.com/breathe/mimosa-peepcode.git",
       "description":"A port of the Peepcode Ember.js app to Mimosa. Uses Emblem for templates, Foundation, Stylus and CoffeeScript on the client. Bower for asset management. Testem and QUnit for testing, with Express/Jade on the server.",
