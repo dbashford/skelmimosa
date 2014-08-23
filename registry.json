@@ -286,6 +286,21 @@
       "commonjs":false
     },
     {
+      "name":"durandal-foundation-noalmond",
+      "url":"https://github.com/DrSammyD/Durandal-Foundation-No-Almond-Mimosa-Skeleton",
+      "description":"A Durandal skeleton project with a ton of integrated libraries, working optimization, an Express server with Handlebars server views, and Bower integration.",
+      "author":"DrSammyD",
+      "keywords":["durandal", "knockout", "jquery", "sammyjs", "bootstrap", "mvvm","mvp","mvc","navigation","router","requirejs","express","node","handlebars", "bower", "i18next", "lodash", "moment","foundation","punches","kodash","numeral","datepicker"],
+      "server":"express",
+      "lang":"javascript",
+      "clientmvc":"Durandal",
+      "cssframework":"foundation",
+      "tests":null,
+      "testRunner":null,
+      "requirejs":true,
+      "commonjs":false
+    },
+    {
       "name":"durandal",
       "url":"https://github.com/dbashford/Durandal-Mimosa-Node-Skeleton",
       "description":"A Durandal skeleton project with a basic navigation-style architecture pre-configured.",
