@@ -363,10 +363,10 @@
     {
       "name":"browserify-hapi-angular",
       "url":"https://github.com/rclayton/mimosa-browserify-hapi-angular",
-      "description":"Mimosa Skeleton for Browserify, Hapi, AngularJS, and Bootstrap.",
+      "description":"Includes Browserify, Hapi, AngularJS, and Bootstrap.",
       "author":"rclayton",
       "keywords":["angularjs", "angular-ui-router", "hapi", "browserify", "bootstrap", "coffeescript", "stylus"],
-      "server":"Hapi.js",
+      "server":"hapi",
       "lang":"coffeescript",
       "clientmvc": "Angular",
       "cssframework": "bootstrap",
@@ -374,6 +374,21 @@
       "testRunner": null,
       "requirejs":false,
       "commonjs":true
+    },
+    {
+      "name":"typescript-simple",
+      "url":"https://github.com/dbashford/MimosaTypeScript",
+      "description":"A 'mimosa new' project that includes TypeScript, Require.js, Hapi, Less, and Dust.",
+      "author":"dbashford",
+      "keywords":["typescript", "hapi", "require.js", "dust", "less"],
+      "server":"hapi",
+      "lang":"typescript",
+      "clientmvc": null,
+      "cssframework": null,
+      "tests": null,
+      "testRunner": null,
+      "requirejs":true,
+      "commonjs":false
     }
   ]
 }
