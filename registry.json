@@ -272,9 +272,9 @@
     },
     {
       "name":"durandal-node",
-      "url":"https://github.com/dbashford/Durandal-Mimosa-Node-Skeleton",
+      "url":"https://github.com/barkbarkuk/Durandal-Mimosa-Node-Skeleton",
       "description":"A Durandal skeleton project with a basic navigation-style architecture pre-configured, an Express server with Handlebars server views, and Bower integration.",
-      "author":"BlueSpire",
+      "author":"barkbarkuk",
       "keywords":["durandal", "knockout", "jquery", "sammyjs", "bootstrap", "mvvm","mvp","mvc","navigation","router","requirejs","express","node","handlebars", "bower"],
       "server":"express",
       "lang":"javascript",
