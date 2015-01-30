@@ -1,7 +1,7 @@
 module.exports = (program, _logger) ->
   logger = _logger
   program
-    .command('skel:new <skeletonName> [directory]')
+    .command('skel:new <skeletonName> <directory>')
     .description("Create a Mimosa project using a skeleton")
     .option("-D, --mdebug", "run in debug mode")
     .action( (skeletonName, directory, opts) ->

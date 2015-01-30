@@ -10,6 +10,11 @@ logger = null
 
 windowsDrive = /^[A-Za-z]:\\/
 
+_success = ->
+  logger.success "New skeleton project successfully created!"
+  logger.info "Inside the new project folder, run 'mimosa watch' to build and watch assets."
+  logger.info "If the new project has server integration, add a '--server' or '-s' flag to serve assets."
+
 _isSystemPath = (str) ->
   windowsDrive.test(str) or str.indexOf("/") is 0
 
@@ -29,15 +34,40 @@ _cloneGitHub = (skeletonName, directory) ->
     _moveDirectoryContents inPath, directory
     logger.info "Cleaning up..."
     _cleanup directory
-    rimraf inPath, (err) ->
-      if err
-        if process.platform is 'win32'
-          logger.warn "A known Windows/Mimosa has made the directory at [[ #{inPath} ]] unremoveable. You will want to clean that up.  Apologies!"
-          logger.success "Skeleton successfully cloned from GitHub."
+    _runNPMInstall directory, ->
+      rimraf inPath, (err) ->
+        if err
+          if process.platform is 'win32'
+            logger.warn "A known Windows/Mimosa has made the directory at [[ #{inPath} ]] unremoveable. You will want to clean that up.  Apologies!"
+            _success()
+          else
+            logger.error "An error occurred cleaning up the temporary holding directory", err
         else
-          logger.error "An error occurred cleaning up the temporary holding directory", err
-      else
-        logger.success "Skeleton successfully cloned from GitHub."
+          _success()
+
+_runNPMInstall = (directory, cb) ->
+  currentDir = process.cwd()
+  process.chdir directory
+
+  # if no packagejson, no need for npm install
+  packageJSON = path.join directory, "package.json"
+  if !fs.existsSync(packageJSON)
+    return cb()
+
+  logger.info "Running npm install inside project directory..."
+  exec "npm install", (err, sout, serr) ->
+    if err
+      logger.error err
+    else
+      console.log sout
+
+    if logger.isDebug()
+      logger.debug "Node module install sout: #{sout}"
+      logger.debug "Node module install serr: #{serr}"
+
+    process.chdir currentDir
+
+    cb()
 
 _moveDirectoryContents = (sourcePath, outPath) ->
   contents = wrench.readdirSyncRecursive(sourcePath).filter (p) ->
@@ -75,19 +105,17 @@ newSkeleton = (skeletonName, directory, opts, _logger) ->
     logger.setDebug()
     process.env.DEBUG = true
 
-  directory = if directory?
-    if _isSystemPath(directory)
-      directory
-    else
-      path.join process.cwd(), directory
+  directory = if _isSystemPath(directory)
+    directory
   else
-    process.cwd()
+    path.join process.cwd(), directory
 
   if _isGitHub(skeletonName)
     _cloneGitHub(skeletonName, directory)
   else if _isSystemPath(skeletonName)
     _moveDirectoryContents skeletonName, directory
-    logger.success "Copied local skeleton to [[ #{directory} ]]"
+    _runNPMInstall directory, ->
+      logger.success "Copied local skeleton to [[ #{directory} ]]"
   else
     retrieveRegistry logger, (registry) ->
       skels = registry.skels.filter (s) -> s.name is skeletonName
