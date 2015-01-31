@@ -31,21 +31,6 @@
       "commonjs":true
     },
     {
-      "name":"mimosa-module-coffeescript",
-      "url":"git://github.com/dbashford/MimosaModuleCoffeeScriptSkeleton.git",
-      "description":"A simple starter skeleton for building a Mimosa module using CoffeeScript",
-      "author":"dbashford",
-      "keywords":["mimosa", "module", "coffeescript"],
-      "server":null,
-      "lang":"coffeescript",
-      "clientmvc":null,
-      "cssframework":null,
-      "tests":null,
-      "testRunner":null,
-      "requirejs":false,
-      "commonjs":true
-    },
-    {
       "name":"mimosa-module-coffeescript-bare",
       "url":"git://github.com/dbashford/MimosaCoffeeModuleBare.git",
       "description":"A starter skeleton for building a Mimosa module using CoffeeScript, but without docs/comments to remove.",
