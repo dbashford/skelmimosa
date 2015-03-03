@@ -38,7 +38,7 @@ _cloneGitHub = (skeletonName, directory) ->
       rimraf inPath, (err) ->
         if err
           if process.platform is 'win32'
-            logger.warn "A known Windows/Mimosa has made the directory at [[ #{inPath} ]] unremoveable. You will want to clean that up.  Apologies!"
+            logger.warn "A known Windows/Mimosa bug has made the directory at [[ #{inPath} ]] unremoveable. You will want to clean that up.  Apologies!"
             _success()
           else
             logger.error "An error occurred cleaning up the temporary holding directory", err
