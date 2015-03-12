@@ -151,6 +151,21 @@
       "commonjs":false
     },
     {
+      "name":"marionette-bootstrap",
+      "url":"git://github.com/Anachron/maborami.git",
+      "description":"Marionette, Boostrap & Ratched skeleton for Mimosa build tool. Includes RequireJS (+CSS & +HBS), Jade, LESS, CoffeeScript inside.",
+      "author":"Anachron",
+      "keywords":["coffeescript", "marionette", "bootstrap", "ratchet", "jade", "bower", "less", "express", "express.io", "socket.io", "require", "handlebars"],
+      "server":"express",
+      "lang":"coffeescript",
+      "clientmvc":"marionette",
+      "cssframework":"less",
+      "tests":null,
+      "testRunner":null,
+      "requirejs":true,
+      "commonjs":false
+    },
+    {
       "name":"browserify-basic",
       "url":"git://github.com/JonET/mimosa-browserify-example.git",
       "description":"A basic 'mimosa new' app but assembled using browserify and commonjs instead of AMD/RequireJS",
